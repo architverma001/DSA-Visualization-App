@@ -4,25 +4,98 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:icon="@drawable/img_4"
+        android:label="DSA visualization"
+        android:roundIcon="@drawable/img_4"
         android:supportsRtl="true"
         android:theme="@style/Theme.DSV">
         <activity
-            android:name=".search.binary_search.BinarySearch"
-            android:exported="false" />
+            android:name="nasim.dsa.viz.search.binary_search.srcActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
-            android:name=".search.linear_search.LinearSearch"
-            android:exported="false" />
+            android:name="nasim.dsa.viz.search.binary_search.srtActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="nasim.dsa.viz.search.binary_search.stActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="nasim.dsa.viz.search.binary_search.Activity_firstpage"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="nasim.dsa.viz.search.binary_search.MaizActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="nasim.dsa.viz.search.binary_search.StackActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="nasim.dsa.viz.search.binary_search.QueueActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="nasim.dsa.viz.search.binary_search.selectionActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="nasim.dsa.viz.search.binary_search.InsertionActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="nasim.dsa.viz.search.binary_search.BubbleActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="nasim.dsa.viz.search.binary_search.BinarySearch"
+            android:exported="false" />
+        <activity
+            android:name="nasim.dsa.viz.search.binary_search.linear_search.LinearSearch"
+            android:exported="false" />
+        <activity
+            android:name="nasim.dsa.viz.MainActivity"
+            android:exported="true">
+
         </activity>
     </application>
 

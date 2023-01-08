@@ -1,13 +1,14 @@
-package nasim.dsa.viz.search.linear_search
+package nasim.dsa.viz.search.binary_search.linear_search
 
 import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
 import kotlinx.coroutines.*
 import nasim.dsa.viz.BaseActivity
-import nasim.dsa.viz.databinding.ActivityLinearSearchBinding
-import nasim.dsa.viz.search.linear_search.adapter.LinearSearchAdapter
+
+import nasim.dsa.viz.search.binary_search.linear_search.adapter.LinearSearchAdapter
 import nasim.dsa.viz.util.Constants
+import nasim.dsa.viz.databinding.ActivityLinearSearchBinding
 
 class LinearSearch : BaseActivity() {
     private lateinit var binding: ActivityLinearSearchBinding

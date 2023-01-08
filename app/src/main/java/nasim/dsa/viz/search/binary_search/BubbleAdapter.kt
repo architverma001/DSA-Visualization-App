@@ -1,34 +1,39 @@
-package nasim.dsa.viz.search.linear_search.adapter
+package nasim.dsa.viz.search.binary_search
 
 import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import nasim.dsa.viz.R
 import nasim.dsa.viz.databinding.ItemNodeBinding
 
-class LinearSearchAdapter(private val list: List<Int>, private val context: Context) :
-    RecyclerView.Adapter<LinearSearchAdapter.LinearSearchViewHolder>() {
+class BubbleAdapter(private val list: ArrayList<Int>,private val list2:ArrayList<Int>,private val list3: ArrayList<Int>, private val context: Context) :
+    RecyclerView.Adapter<BubbleAdapter.LinearSearchViewHolder>() {
 
     private var row:Int = -1
     private var found:Int = -1
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): LinearSearchViewHolder {
         return LinearSearchViewHolder(
             ItemNodeBinding.inflate(LayoutInflater.from(context),parent,false)
         )
+
     }
 
     override fun onBindViewHolder(holder: LinearSearchViewHolder, position: Int) {
         holder.binding.itemText.text = list[position].toString()
-        if (row == position ){
-            holder.binding.itemText.setBackgroundResource(R.drawable.node_bg_hovered)
-        }else{
 
-            holder.binding.itemText.setBackgroundResource(R.drawable.node_bg)
+       if(list2[position]==1 ){
+           holder.binding.itemText.setBackgroundResource(R.drawable.found)
+       }
+
+        if(list3[position]==1 ){
+            holder.binding.itemText.setBackgroundResource(R.drawable.found)
         }
+
+
 
     }
 
@@ -41,7 +46,7 @@ class LinearSearchAdapter(private val list: List<Int>, private val context: Cont
     }
 
 
-    inner class LinearSearchViewHolder(val binding: ItemNodeBinding) : RecyclerView.ViewHolder(binding.root) {}
+    inner class LinearSearchViewHolder(val binding: ItemNodeBinding) : RecyclerView.ViewHolder(binding.root){}
 
 }
 
